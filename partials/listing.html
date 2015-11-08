@@ -1,0 +1,31 @@
+<div>
+  <h1>Personal Campign Page Listing</h1>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Status</th>
+    <th>Page Type</th>
+    <th>No:of Contributions</th>
+    <th>Amount Raised</th>
+    <th>Goal Amount</th>
+    <th style="min-width: 80px">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="result in results" ng-class-even="'even-row'"
+      ng-class-odd="'odd-row'">
+    <td><a ng-href="{{result.view_page_link}}" target="_blank">{{result.title}}</a></td>
+    <td>{{result.is_active}}</td>
+    <td>{{result.page_type}}</td>
+    <td>{{result.no_of_contributions}}</td>
+    <td>{{result.amout_raised}}</td>
+    <td>{{result.goal_amount}}</td>
+    <td>
+      <a ng-href="{{result.edit_page_link}}" target="_blank">Edit</a>      
+    </td>
+  </tr>
+  </tbody>
+</table>
